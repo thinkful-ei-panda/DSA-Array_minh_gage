@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const Array = require('./prework/arrays/array');
 
 const main = () =>{
@@ -21,7 +22,7 @@ const main = () =>{
   arr.push(10);
   console.log('push 7 called');
 
-//   arr.push('tauhiba');
+  //   arr.push('tauhiba');
 
   console.log('the content info of the array (inside main.js l 13) is =>',arr);
 

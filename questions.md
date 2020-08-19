@@ -15,7 +15,7 @@ i.e. `Array { length: 1, _capacity: 3, ptr: 0 }`
 * What is the length, capacity and memory address of your array? 
     Explain the result of your program after adding the new lines of code.
 `Array { length: 6, _capacity: 12, ptr: 3 }`
-...... :| ahhhhhhh
+`length : 6` , `capacity :12` and the memory address is `Float64Array(1024)`(*i could be wrong*)
 
 
 ### Part 3
@@ -223,6 +223,25 @@ Write an algorithm that deletes given characters from a string. For example, giv
 
 - Input:`'Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'`
 - Output: `'Bttl f th Vwls: Hw vs. Grzny'`
+
+```
+const wordRemoval = (str,reg) =>{
+  let res = '';
+
+  for(let i = 0 ; i < str.length ; i++){
+    let j = 0; 
+    let on = true; 
+    while( on ){
+
+      if((j + 1) === reg.length && str[i] !== reg[j] ){ res += str[i] , on = !on ;}
+
+      if(str[i] !== reg[j]){j++;}else{on = !on;}
+
+    }
+  }
+  return res;
+};
+```
 
 
 ### Part 10

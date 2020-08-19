@@ -30,10 +30,10 @@ const merge = (arrOne,arrTwo) => {
 const mergeShort =( arr1, arr2) => [...arr1,...arr2].sort((a,b)=> a-b);
 
 
-console.time('one line')
+console.time('one line');
 console.log(mergeShort(testArray1,testArray2));
-console.timeEnd('one line')
+console.timeEnd('one line');
 
-console.time('with a while loop')
+console.time('with a while loop');
 console.log(merge(testArray1,testArray2));
-console.timeEnd('with a while loop')
+console.timeEnd('with a while loop');
