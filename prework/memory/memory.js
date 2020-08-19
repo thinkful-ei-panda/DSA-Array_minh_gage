@@ -37,7 +37,7 @@ class Memory {
   }
   
   get(ptr) {
-    console.log(`in Memeory, the typeof index of get(index) is ${typeof ptr}`);
+    console.log(`memory's content is ${this.memory}`)
 
     return this.memory[ptr];
   }
