@@ -5,6 +5,7 @@ class Memory {
   }
   
   allocate(size) {
+    //console.log(`size = ${size}, head = ${this.head}, memory = ${this.memory}`);
     if (this.head + size > this.memory.length) {
       return null;
     }
@@ -36,6 +37,8 @@ class Memory {
   }
   
   get(ptr) {
+    console.log(`in Memeory, the typeof index of get(index) is ${typeof ptr}`);
+
     return this.memory[ptr];
   }
   
