@@ -37,8 +37,7 @@ class Memory {
   }
   
   get(ptr) {
-    console.log(`memory's content is ${this.memory}`)
-
+    console.log(`memory = ${this.memory}`);
     return this.memory[ptr];
   }
   

@@ -6,13 +6,26 @@ const main = () =>{
   let arr = new Array();
   
   
-  arr.push(1);
-  arr.push('2nd Item');
+  arr.push(3);
+  console.log('push 1 call');
+  arr.push(5);
+  console.log('push 2 called');
   arr.push('3rd Item');
-  arr.push('4th Item');
+  console.log('push 3 called');
+  arr.push(15);
+  console.log('push 4 called');
+  arr.push(19);
+  console.log('push 5 called');
+  arr.push(45);
+  console.log('push 6 called');
+  arr.push(10);
+  console.log('push 7 called');
+
+//   arr.push('tauhiba');
+
   console.log('the content info of the array (inside main.js l 13) is =>',arr);
 
-  console.log(arr.get(1).toString());
+  console.log(arr.get(0));
   
 }; 
 
