@@ -296,7 +296,7 @@ Write an algorithm which searches through a 2D array, and whenever it finds a 0 
 [0,0,1,1,0]];
 ```
 
-..... who ever came up with test must hate puppy and apple pie 
+..... who ever came up with test must hate puppies and apple pie 
 
 ```
 const rowFix = test => {
