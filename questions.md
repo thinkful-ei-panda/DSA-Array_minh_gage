@@ -344,3 +344,18 @@ Given 2 strings, `str1` and `str2`, write a program that checks if `str2` is a r
 - Input: `amazon`, `azonam`
 
 - Output: `true`
+
+```
+const rotation = (str1,str2) => {
+  if(str1.length !== str2.length){
+    return false;
+  } 
+  const l = str2.length; 
+
+  for(let i = 0; i < l ; i++){
+    str2 = `${str2.substr(l-1)}${str2.substr(0 ,l-1)}`;
+    if(str2.toLowerCase() === str1.toLowerCase()) return true; 
+  }
+  return false;
+};
+```
