@@ -247,9 +247,90 @@ const wordRemoval = (str,reg) =>{
 ### Part 10
 ##### Products
 
+Given an array of numbers, write an algorithm that outputs an array where each index is the product of all the numbers in the input array except for the number at each current index. See the following example input and output.
+
+- Input:[1, 3, 9, 4]
+- Output:[108, 36, 12, 27]
+i.e.for index of  0 (being `1`)`3*9*4` and for 1 (being `3`) `1*9*4`
+
+```
+const products = arr => {
+
+  let res = [];
+
+  for(let i = 0 ; i < arr.length ; i++){
+    for(let j = 0 ; j < arr. length ; j++){
+      if(i !== j){
+        if(res[i] == null){
+          res.push(arr[j]);
+        }else{
+          res[i] *= arr[j];
+        }    
+      }
+    }
+  }
+  return res; 
+};
+```
+idk if you can get any better then `O(n^2)`
 
 ### Part 11
-##### 2D array
+##### 2D array3
+
+Write an algorithm which searches through a 2D array, and whenever it finds a 0 should set the entire row and column to 0.
+
+- Input:
+```
+[[1,0,1,1,0],
+[0,1,1,1,0],
+[1,1,1,1,1],
+[1,0,1,1,1],
+[1,1,1,1,1]];
+```
+- Output:
+```
+[[0,0,0,0,0],
+[0,0,0,0,0],
+[0,0,1,1,0],
+[0,0,0,0,0],
+[0,0,1,1,0]];
+```
+
+..... who ever came up with test must hate puppy and apple pie 
+
+```
+const rowFix = test => {
+  let res = [];
+
+
+  for(let i = 0 ; i < test.length ; i++){
+    res.push([]);
+    for(let j = 0 ; j < test[i].length ; j++ ){
+      res[i].push(1);
+    }
+  }
+  for(let i = 0 ; i < test.length ; i++){
+    for(let j = 0 ; j < test[i].length ; j++ ){
+      if(test[i][j] === 0 ){
+        let x = i;
+        let y = 0;
+        while(x < test.length){
+          res[x][j] = 0;
+          x++;
+        }
+        while(y < test[i].length){
+          res[i][y] = 0;
+          y++;
+        } 
+      }
+    }
+  }
+  return res; 
+};
+```
+it's an ...`o(2n^2)`? 
+i know i could make it better but it's 2332 atm..
+
 
 ### part 12
 ##### String rotation
