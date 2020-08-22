@@ -2,6 +2,21 @@ const testArray1 = [1, 3, 6, 8, 11];
 const testArray2 = [2, 3, 5, 8, 9, 10];
 
 
+
+const re = () => {
+  const res = [];
+  for(let i = 0 ; i < 10000000 ; i++){
+    res.push(i);
+  }
+  return res;
+};
+const re2 = () => {
+  const res = [];
+  for(let i = 1 ; i < 10000000 ; i++){
+    res.push(i);
+  }
+  return res;
+};
 const merge = (arrOne,arrTwo) => {
   /*could put an error handler... but time */
   
@@ -27,13 +42,15 @@ const merge = (arrOne,arrTwo) => {
 };
 
 
-const mergeShort =( arr1, arr2) => [...arr1,...arr2].sort((a,b)=> a-b);
+const mergeShort = ( arr1, arr2) => [...arr1,...arr2].sort((a,b)=> a-b);
 
+let large1 = re();
+let large2 = re2();
 
 console.time('one line');
-console.log(mergeShort(testArray1,testArray2));
+console.log(mergeShort(large1,large2));
 console.timeEnd('one line');
 
 console.time('with a while loop');
-console.log(merge(testArray1,testArray2));
+console.log(merge(large1,large2));
 console.timeEnd('with a while loop');
